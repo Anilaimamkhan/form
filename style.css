@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./img/black\ and\ white\ img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    width: 100px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btnlogin-poopup {
+    width: 70px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    color: white;
+    font-weight: bolder;
+}
+
+.btnlogin-poopup:hover {
+    background-color: white;
+    color: #34495e;
+}
+
+header {
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header nav.navbar a {
+
+    margin-right: 40px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500px;
+}
+
+header nav.navbar a::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s linear;
+}
+
+header nav.navbar a:hover:after {
+    transform: scaleX(1);
+}
+
+.home {
+    position: relative;
+    width: 350px;
+    height: 410px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 50px;
+    display: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255,255, 0.8);
+}
+
+.home.active {
+    display: block;
+}
+
+.buttons {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.buttons .btn {
+    padding: 10px 22px;
+    background-color: black;
+    border: 1px solid #000;
+    color: #fff;
+    margin: 0px 8px;
+    cursor: pointer;
+box-shadow: 0 0 5px rgba(255, 255,255, 0.8);
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px !important;
+
+}
+/* label{
+    position: absolute;
+    top: 0;
+left: 0;
+} */
+/* .input-box .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 15px;
+
+} */
+
+.box {
+    border-bottom: .9px solid #fff;
+
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.input-box:focus~label,
+.input-box:valid~label{
+
+    margin-top: -20px;
+
+}
+/* .input-box:valid~label{
+    
+} */
+
+label {
+    color: #fff;
+}
+.input-box input:focus{
+    color: #fff !important;
+}
+.input-box span.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.flex {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex label {
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.flex a {
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.flex a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+button.btn {
+    width: 100%;
+    padding: 15px 22px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    border: 1px solid black;
+box-shadow: 0 0 5px rgba(255, 255,255, 0.8);
+}
+
+button.btn:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.buttons .btn.active {
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.login-form h2 {
+    margin: 25px 0px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.register-form h2 {
+    margin: 25px 0px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+form {
+    display: none;
+}
+
+form.active {
+    display: block;
+}
+
+.cross {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 8px 10px;
+    border-bottom-left-radius: 20px;
+    background-color: #000;
+    text-align: center;
+}
+
+.cross ion-icon {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: 900;
+}
+.bears{
+ 
+    display: none;
+    cursor: pointer;
+}
+.bears ion-icon{
+    color: #fff;
+    font-size: 25px;
+    z-index: 9999999;
+}
+
+
+
+@media (max-width:990px) {
+    header nav.navbar a {
+        margin-right: 20px;
+    }
+
+    header {
+        padding: 20px 50px;
+    }
+}
+
+
+@media (max-width:768px){
+
+    nav.navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #535c68;
+        text-align: center;
+        display: none;
+        padding-top: 50px;
+
+    }
+    nav.navbar a{
+        display: block;
+        color: #000 !important;
+        margin: 10px 0px;
+        font-weight: 500;
+     }
+    .bears{
+        display: inline-block;
+        /* display: none; */
+    }
+    header nav.navbar a::after{
+        /* background-color: #000; */
+        display: none;
+    }
+    header nav.navbar a:hover{
+        color: #fff !important;
+    }
+    .btnlogin-poopup{
+        margin-left: -13px;
+    }
+    nav.navbar.active{
+        display: block;
+    }
+   
+}
+
+@media (max-width:768px){
+    .header{
+        padding:20px 30px;
+    }
+}
